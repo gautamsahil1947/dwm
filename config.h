@@ -107,6 +107,8 @@ static const char *mutecmd[] = { "pactl", "set-sink-mute", "0", "toggle", NULL }
 static const char *volupcmd[] = { "pactl", "set-sink-volume", "0", "+5%", NULL };
 static const char *voldowncmd[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
 
+static const char *flameshotcmd[] = {"flameshot", "gui", NULL };
+
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -169,6 +171,7 @@ static const Key keys[] = {
 
 	{ MODKEY,                       XK_w,                           spawn,           { .v = browsercmd } },
 	{ MODKEY,                       XK_n,                           spawn,           { .v = newsboatcmd } },
+	{ MODKEY,                       XK_a,                           spawn,           { .v = flameshotcmd } },
 
         { 0,                            XF86XK_MonBrightnessUp,         spawn,          {.v = lightup }},
         { 0,                            XF86XK_MonBrightnessDown,       spawn,          {.v = lightdown } },

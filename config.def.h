@@ -42,7 +42,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
+	{ "Gimp",    NULL,     NULL,           0,         0,          0,           0,        -1 },
 	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
 	{ "st-256color",      NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
@@ -97,8 +97,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
-static const char *lightdown[]  = { "light", "-U", "5", NULL };
-static const char *lightup[]  = { "light", "-A", "5", NULL };
+static const char *lightdown[]  = { "backlight", "down", NULL };
+static const char *lightup[]  = { "backlight", "up", NULL };
 
 static const char *browsercmd[]  = { "brave", NULL };
 static const char *newsboatcmd[]  = { "stnewsboat", NULL };

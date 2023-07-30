@@ -110,6 +110,7 @@ static const char *volupcmd[] = { "pactl", "set-sink-volume", "0", "+5%", NULL }
 static const char *voldowncmd[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
 
 static const char *flameshotcmd[] = {"flameshot", "gui", NULL };
+static const char *vimimg[] = {"st", "-e", "feh", "/home/sahil/.config/repos/Pictures/mainwallpapers/vim.jpg", NULL };
 
 
 static const Key keys[] = {
@@ -174,6 +175,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_w,                           spawn,           { .v = browsercmd } },
 	{ MODKEY,                       XK_n,                           spawn,           { .v = newsboatcmd } },
 	{ MODKEY,                       XK_a,                           spawn,           { .v = flameshotcmd } },
+	{ MODKEY,                       XK_v,                           spawn,           { .v = vimimg } },
 
         { 0,                            XF86XK_MonBrightnessUp,         spawn,          {.v = lightup }},
         { 0,                            XF86XK_MonBrightnessDown,       spawn,          {.v = lightdown } },

@@ -105,7 +105,8 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34
 static const char *lightdown[]  = { "backlight", "down", NULL };
 static const char *lightup[]  = { "backlight", "up", NULL };
 
-static const char *browsercmd[]  = { "brave", NULL };
+static const char *bravecmd[]  = { "brave", NULL };
+static const char *firefoxcmd[]  = { "firefox", NULL };
 static const char *newsboatcmd[]  = { "stnewsboat", NULL };
 
 static const char *mutecmd[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
@@ -175,7 +176,8 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 
-	{ MODKEY,                       XK_w,                           spawn,           { .v = browsercmd } },
+	{ MODKEY,                       XK_w,                           spawn,           { .v = bravecmd } },
+	{ MODKEY,                       XK_e,                           spawn,           { .v = firefoxcmd } },
 	{ MODKEY,                       XK_n,                           spawn,           { .v = newsboatcmd } },
 	{ MODKEY,                       XK_a,                           spawn,           { .v = flameshotcmd } },
 

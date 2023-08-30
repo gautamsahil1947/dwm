@@ -102,6 +102,8 @@ static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
+static const char *offlinevideos[] = { "offlinevideos", NULL };
+
 static const char *lightdown[]  = { "backlight", "down", NULL };
 static const char *lightup[]  = { "backlight", "up", NULL };
 
@@ -180,6 +182,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_e,                           spawn,           { .v = firefoxcmd } },
 	{ MODKEY,                       XK_n,                           spawn,           { .v = newsboatcmd } },
 	{ MODKEY,                       XK_a,                           spawn,           { .v = flameshotcmd } },
+	{ MODKEY,                       XK_c,                           spawn,           { .v = offlinevideos } },
 
         { 0,                            XF86XK_MonBrightnessUp,         spawn,          {.v = lightup }},
         { 0,                            XF86XK_MonBrightnessDown,       spawn,          {.v = lightdown } },

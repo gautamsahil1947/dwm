@@ -103,6 +103,8 @@ static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
 static const char *offlinevideos[] = { "offlinevideos", NULL };
+static const char *bookmark[]  = { "bookmark-dwm", NULL };
+static const char *getbookmark[]  = { "getbookmark", NULL };
 
 static const char *lightdown[]  = { "backlight", "down", NULL };
 static const char *lightup[]  = { "backlight", "up", NULL };
@@ -183,6 +185,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_n,                           spawn,           { .v = newsboatcmd } },
 	{ MODKEY,                       XK_a,                           spawn,           { .v = flameshotcmd } },
 	{ MODKEY,                       XK_c,                           spawn,           { .v = offlinevideos } },
+	{ MODKEY,                       XK_v,                           spawn,           { .v = bookmark } },
+	{ MODKEY,                       XK_g,                           spawn,           { .v = getbookmark } },
 
         { 0,                            XF86XK_MonBrightnessUp,         spawn,          {.v = lightup }},
         { 0,                            XF86XK_MonBrightnessDown,       spawn,          {.v = lightdown } },

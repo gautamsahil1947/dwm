@@ -126,7 +126,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_s,       togglescratch,  {.v = scratchpadcmd } },
 
-	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY,                       XK_v,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
@@ -185,7 +185,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_n,                           spawn,           { .v = newsboatcmd } },
 	{ MODKEY,                       XK_a,                           spawn,           { .v = flameshotcmd } },
 	{ MODKEY,                       XK_c,                           spawn,           { .v = offlinevideos } },
-	{ MODKEY,                       XK_v,                           spawn,           { .v = bookmark } },
+	{ MODKEY,                       XK_b,                           spawn,           { .v = bookmark } },
 	{ MODKEY,                       XK_g,                           spawn,           { .v = getbookmark } },
 
         { 0,                            XF86XK_MonBrightnessUp,         spawn,          {.v = lightup }},

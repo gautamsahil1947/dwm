@@ -111,6 +111,7 @@ static char dmenumon[2] =
 // col_gray4, NULL };
 static const char *dmenucmd[] = {"dmenu_run", NULL};
 static const char *termcmd[] = {"st", NULL};
+static const char *getircurls[] = {"getircurls", NULL};
 
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = {"st", "-t",     scratchpadname,
@@ -195,6 +196,7 @@ static const Key keys[] = {
     {MODKEY, XK_c, spawn, {.v = offlinevideos}},
     {MODKEY, XK_b, spawn, {.v = bookmark}},
     {MODKEY, XK_g, spawn, {.v = getbookmark}},
+    {MODKEY, XK_y, spawn, {.v = getircurls}},
 
     {0, XF86XK_MonBrightnessUp, spawn, {.v = lightup}},
     {0, XF86XK_MonBrightnessDown, spawn, {.v = lightdown}},

@@ -93,9 +93,9 @@ static const Layout layouts[] = {
   {MODKEY, KEY, view, {.ui = 1 << TAG}},                                       \
       {MODKEY | ControlMask, KEY, toggleview, {.ui = 1 << TAG}},               \
       {MODKEY | ShiftMask, KEY, tag, {.ui = 1 << TAG}},                        \
-      {MODKEY | ControlMask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}},    
-      // {ALTMOD, KEY, focusnthmon, {.i = TAG}},                              
-      // {ALTMOD | ShiftMask, KEY, tagnthmon, {.i = TAG}},
+      {MODKEY | ControlMask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}},
+// {ALTMOD, KEY, focusnthmon, {.i = TAG}},
+// {ALTMOD | ShiftMask, KEY, tagnthmon, {.i = TAG}},
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd)                                                             \
@@ -134,6 +134,7 @@ static const char *voldowncmd[] = {"pactl", "set-sink-volume", "0", "-5%",
                                    NULL};
 
 static const char *flameshotcmd[] = {"flameshot", "gui", NULL};
+static const char *cppreference[] = {"brave", "/home/sahil/.config/repos/cppreference/reference/en/index.html", NULL};
 
 static const Key keys[] = {
     /* modifier                     key        function        argument */
@@ -197,6 +198,7 @@ static const Key keys[] = {
     {MODKEY, XK_b, spawn, {.v = bookmark}},
     {MODKEY, XK_g, spawn, {.v = getbookmark}},
     {MODKEY, XK_y, spawn, {.v = getircurls}},
+    {MODKEY, XK_z, spawn, {.v = cppreference}},
 
     {0, XF86XK_MonBrightnessUp, spawn, {.v = lightup}},
     {0, XF86XK_MonBrightnessDown, spawn, {.v = lightdown}},

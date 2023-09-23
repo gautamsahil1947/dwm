@@ -121,17 +121,10 @@ static const char *offlinevideos[] = {"offlinevideos", NULL};
 static const char *bookmark[] = {"bookmark-dwm", NULL};
 static const char *getbookmark[] = {"getbookmark", NULL};
 
-static const char *lightdown[] = {"backlight", "down", NULL};
-static const char *lightup[] = {"backlight", "up", NULL};
-
 static const char *bravecmd[] = {"brave", NULL};
 static const char *firefoxcmd[] = {"firefox", NULL};
 static const char *newsboatcmd[] = {"stnewsboat", NULL};
 
-static const char *mutecmd[] = {"pactl", "set-sink-mute", "0", "toggle", NULL};
-static const char *volupcmd[] = {"pactl", "set-sink-volume", "0", "+5%", NULL};
-static const char *voldowncmd[] = {"pactl", "set-sink-volume", "0", "-5%",
-                                   NULL};
 
 static const char *flameshotcmd[] = {"flameshot", "gui", NULL};
 static const char *cppreference[] = {"brave", "/home/sahil/.config/repos/cppreference/reference/en/index.html", NULL};
@@ -200,11 +193,11 @@ static const Key keys[] = {
     {MODKEY, XK_y, spawn, {.v = getircurls}},
     {MODKEY, XK_z, spawn, {.v = cppreference}},
 
-    {0, XF86XK_MonBrightnessUp, spawn, {.v = lightup}},
-    {0, XF86XK_MonBrightnessDown, spawn, {.v = lightdown}},
-    {0, XF86XK_AudioMute, spawn, {.v = mutecmd}},
-    {0, XF86XK_AudioLowerVolume, spawn, {.v = voldowncmd}},
-    {0, XF86XK_AudioRaiseVolume, spawn, {.v = volupcmd}},
+    {0, XF86XK_MonBrightnessUp, spawn, SHCMD("light -A 5; kill -38 $(pidof dwmblocks)")},
+    {0, XF86XK_MonBrightnessDown, spawn, SHCMD("light -U 5; kill -38 $(pidof dwmblocks)")},
+    {0, XF86XK_AudioMute, spawn, SHCMD("pactl set-sink-mute 0 toggle; kill -37 $(pidof dwmblocks)")},
+    {0, XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume 0 -5%; kill -37 $(pidof dwmblocks)")},
+    {0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pactl set-sink-volume 0 +5%; kill -37 $(pidof dwmblocks)")},
 
 };
 

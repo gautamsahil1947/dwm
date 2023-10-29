@@ -39,7 +39,8 @@ static const unsigned int alphas[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
+static const char *tags[] = {" ",  " ",  "󰨞 ", " ", "󰭹 ",
+                             "󰟢 ", "󰟢 ", "󰟢 ", "󰟢 "};
 
 static const Rule rules[] = {
     /* xprop(1):
@@ -126,9 +127,8 @@ static const char *firefoxcmd[] = {"firefox", NULL};
 static const char *newsboatcmd[] = {"stnewsboat", NULL};
 
 static const char *flameshotcmd[] = {"flameshot", "gui", NULL};
-static const char *cppreference[] = {
-    "brave", "/home/sahil/.config/repos/cppreference/reference/en/index.html",
-    NULL};
+static const char *emacsarchive[] = {"emacs",
+                                     "/home/sahil/.config/repos/archive", NULL};
 
 static const Key keys[] = {
     /* modifier                     key        function        argument */
@@ -192,7 +192,7 @@ static const Key keys[] = {
     {MODKEY, XK_b, spawn, {.v = bookmark}},
     {MODKEY, XK_g, spawn, {.v = getbookmark}},
     {MODKEY, XK_y, spawn, {.v = getircurls}},
-    {MODKEY, XK_z, spawn, {.v = cppreference}},
+    {MODKEY, XK_z, spawn, {.v = emacsarchive}},
 
     {0, XF86XK_MonBrightnessUp, spawn,
      SHCMD("light -A 5; kill -38 $(pidof dwmblocks)")},
@@ -204,7 +204,6 @@ static const Key keys[] = {
      SHCMD("pactl set-sink-volume 0 -5%; kill -37 $(pidof dwmblocks)")},
     {0, XF86XK_AudioRaiseVolume, spawn,
      SHCMD("pactl set-sink-volume 0 +5%; kill -37 $(pidof dwmblocks)")},
-
 };
 
 /* button definitions */
